@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_Home"
+            android:icon="@drawable/ic_home_black"
+            android:title="@string/home" />
+        <item
+            android:id="@+id/nav_Category"
+            android:icon="@drawable/ic_category_black"
+            android:title="@string/category" />
+        <item
+            android:id="@+id/nav_Shop"
+            android:icon="@drawable/ic_shop_black"
+            android:title="@string/shop" />
+
+        <item
+            android:id="@+id/nav_Cart"
+            android:icon="@drawable/ic_shopping_cart_black"
+            android:title="@string/cart" />
+        <item
+            android:id="@+id/nav_Search"
+            android:icon="@drawable/ic_search_black"
+            android:title="@string/search" />
+
+        <item
+            android:id="@+id/nav_Share"
+            android:icon="@drawable/ic_share_black"
+            android:title="@string/share" />
+        <item
+            android:id="@+id/nav_EditProfile"
+            android:icon="@drawable/ic_edit_black"
+            android:title="@string/editprofile" />
+
+        <item
+            android:id="@+id/nav_ContactUs"
+            android:icon="@drawable/ic_contacts_black"
+            android:title="@string/contactus" />
+        <item
+            android:id="@+id/nav_AboutUs"
+            android:icon="@drawable/ic_aboutus_black"
+            android:title="@string/aboutus" />
+    </group>
+
+
+</menu>

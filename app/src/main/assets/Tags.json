@@ -1,0 +1,11 @@
+[
+  {
+    "TagID": "1",
+    "TagName": "Blue"
+  },
+
+  {
+    "TagID": "2",
+    "TagName" : "Red"
+  }
+]
