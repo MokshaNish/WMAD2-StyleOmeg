@@ -47,6 +47,7 @@ public void register(View view){
         Intent intent = new Intent(this,ForgetpwdActivity.class);
         startActivity(intent);
     }
+    //comment
 public void validate(String email, String password){
     List<User> userList = User.find(User.class, "email = ? and password = ?", email,password);
     for (User uss:userList
