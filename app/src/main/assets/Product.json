@@ -1,119 +1,119 @@
 [
   {
-    "Id":1,
+
     "Name": "Men red T-Shirt",
     "ShortDescription": "Men red collarless T-Shirt ,color: Red , brand: Ferarri , Sleeve Length :Short sleeve , Style: Graphic Tee , material: Cotton",
     "LongDescription": "Men red collarless T-Shirt ,color: Red , brand: Ferarri , Sleeve Length :Short sleeve , Style: Graphic Tee , material: Cotton",
     "Catagory": 1,
-    "Price":"RS.5000",
+    "Price":"5000.0",
     "Quantity": 20,
     "Active": true,
     "ScaledImage": "https://images-na.ssl-images-amazon.com/images/I/41UEkedtCPL._SY450_.jpg",
     "FullImage": "https://images-na.ssl-images-amazon.com/images/I/41UEkedtCPL._SY450_.jpg"
   },
   {
-    "Id":2,
+
     "Name": "Red Dress",
     "ShortDescription": "Red party dress, color:Red, brand:Unbrand, Dress Length:Knee Length, Sleeve Length:Strappy, material:Chiffon",
     "LongDescription": "Red party dress, color:Red, brand:Unbrand, Dress Length:Knee Length, Sleeve Length:Strappy, material:Chiffon",
     "Catagory": 2,
-    "Price": "RS.3000",
+    "Price": "3000.0",
     "Quantity": 30,
     "Active": true,
     "ScaledImage": "http://dpegb9ebondhq.cloudfront.net/product_photos/50742659/1_f626fb48-7d37-4bae-9b92-42a31f9ab013_1024x1024_original.jpg",
     "FullImage": "http://dpegb9ebondhq.cloudfront.net/product_photos/50742659/1_f626fb48-7d37-4bae-9b92-42a31f9ab013_1024x1024_original.jpg"
   },
   {
-    "Id":3,
+
     "Name": "Ladies Short",
     "ShortDescription": "Ladies Short, Color:Blue, brand:Levis, Length: Short, material: Denim, Floral Design",
     "LongDescription": "Ladies Short, Color:Blue, brand:Levis, Length: Short, material: Denim, Floral Design",
     "Catagory": 2,
-    "Price": "RS.2500",
+    "Price": "2500.0",
     "Quantity": 10,
     "Active": true,
     "ScaledImage": "https://cbu01.alicdn.com/img/ibank/2017/817/580/4073085718_1453572700.jpg",
     "FullImage": "https://cbu01.alicdn.com/img/ibank/2017/817/580/4073085718_1453572700.jpg"
   },
   {
-    "Id":4,
+
     "Name": "White Top",
     "ShortDescription": "White top, Color:White, brand:Guess, material:Polyester",
     "LongDescription": "White top, Color:White, brand:Guess, material:Polyester",
     "Catagory": 2,
-    "Price": "RS.2000",
+    "Price": "2000.0",
     "Quantity": 50,
     "Active": true,
     "ScaledImage": "https://i.pinimg.com/474x/53/0d/c2/530dc251dcc9959896ea58f0b30abae8--shein-shirts-ruffled-top.jpg",
     "FullImage": "https://i.pinimg.com/474x/53/0d/c2/530dc251dcc9959896ea58f0b30abae8--shein-shirts-ruffled-top.jpg"
   },
   {
-    "Id":5,
+
     "Name": "Men Trouser",
     "ShortDescription": "Men Linen trouser, Color:white, material:Cotton Linen, brand:Unbrand, Length:Long ,Style:Casual",
     "LongDescription": "Men Linen trouser, Color:white, material:Cotton Linen, brand:Unbrand, Length:Long ,Style:Casual",
     "Catagory": 1,
-    "Price": "RS.3500",
+    "Price": "3500.0",
     "Quantity": 24,
     "Active": true,
     "ScaledImage": "https://www.zegna.us/content/zegna/.view_image.URI32.TT11.352.F.453.604.jpeg",
     "FullImage": "https://www.zegna.us/content/zegna/.view_image.URI32.TT11.352.F.453.604.jpeg"
   },
   {
-    "Id":6,
+
     "Name": "Kids Polo hoddie",
     "ShortDescription": "Kids Ralph Lauren Polo Hoddie, Color:Blue, Pattern:Solid, Brand:Ralph Lauren Polo , Sleeve Length:Long ",
     "LongDescription": "Kids Ralph Lauren Polo Hoddie, Color:Blue, Pattern:Solid, Brand:Ralph Lauren Polo , Sleeve Length:Long",
     "Catagory": 3,
-    "Price": "RS.4000",
+    "Price": "4000.0",
     "Quantity": 20,
     "Active": true,
     "ScaledImage": "http://www.parksidebhm.com/images/95/428.jpg",
     "FullImage": "http://www.parksidebhm.com/images/95/428.jpg"
   },
   {
-    "Id":7,
+
     "Name": "Pearl Necklace",
     "ShortDescription": "White pearl Necklace, Color:White & Gold, Style:Fashion, material:Pearl , Main stone:Pearl",
     "LongDescription": "White pearl Necklace, Color:White & Gold, Style:Fashion, material:Pearl , Main stone:Pearl",
     "Catagory": 4,
-    "Price": "RS.30000",
+    "Price": "30000.0",
     "Quantity": 10,
     "Active": true,
     "ScaledImage": "http://bingefashion.com/wp-content/uploads/2017/09/gold-filigree-white-pearl-necklace-gold-bead-white-pearl-necklace-oqwxohy-.jpg",
     "FullImage": "http://bingefashion.com/wp-content/uploads/2017/09/gold-filigree-white-pearl-necklace-gold-bead-white-pearl-necklace-oqwxohy-.jpg"
   },
   {
-    "Id":8,
+
     "Name": "Ray-Ban Sunglass",
     "ShortDescription": "Ray-Ban Authentic Gold Aviator Sunglasses, Gender:Unisex, Temple Length:160, Lens Color:Black",
     "LongDescription": "Ray-Ban Authentic Gold Aviator Sunglasses, Gender:Unisex, Temple Length:160, Lens Color:Black",
     "Catagory": 4,
-    "Price": "RS.20000",
+    "Price": "20000.0",
     "Quantity": 10,
     "Active": true,
     "ScaledImage": "https://gq-images.condecdn.net/image/olJ3jDWe0Zq/crop/405/f/sunglasses-02-gq-19feb18_b.jpg",
     "FullImage": "https://gq-images.condecdn.net/image/olJ3jDWe0Zq/crop/405/f/sunglasses-02-gq-19feb18_b.jpg"
   },
   {
-    "Id":9,
+
     "Name": "Kids Pink Dress",
     "ShortDescription": "Kids Pink Dress, Gender:Girls, Color:Pink, Dress Length:Short brand:Unbrand",
     "LongDescription": "Kids Pink Dress, Color:Pink, Dress Length:Short brand:Unbrand",
     "Catagory": 3,
-    "Price": "RS.1500",
+    "Price": "1500.0",
     "Quantity": 50,
     "Active": true,
     "ScaledImage": "http://16hljuumewe30onxk2um4f3bmt.wpengine.netdna-cdn.com/files/2013/10/Free-shipping-Fashion-girls-flower-dresses-Girls-Pink-dresses-kids-dresses-new-fashion-magic-cube-4.jpg",
     "FullImage": "http://16hljuumewe30onxk2um4f3bmt.wpengine.netdna-cdn.com/files/2013/10/Free-shipping-Fashion-girls-flower-dresses-Girls-Pink-dresses-kids-dresses-new-fashion-magic-cube-4.jpg"
   },
   {
-    "Id":10,
+
     "Name": "Blue Romper",
     "ShortDescription": "Ladies Blue Romper, color:Blue, Length:Long, brand:Mango ",
     "LongDescription": "Ladies Blue Romper, color:Blue, Length:Long, brand:Mango",
     "Catagory": 2,
-    "Price": "RS.3500",
+    "Price": "3500.0",
     "Quantity": 15,
     "Active": true,
     "ScaledImage": "http://dimg.dillards.com/is/image/DillardsZoom/zoom/gb-fan-fav-tie-front-jumpsuit/05253540_zi_blue.jpg",

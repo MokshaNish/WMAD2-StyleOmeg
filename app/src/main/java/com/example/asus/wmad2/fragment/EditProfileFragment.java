@@ -67,7 +67,7 @@ public class EditProfileFragment extends Fragment{
     }
     public void ud(String name, String phone,String email){
         SharedPreferences preferences= this.getActivity().getApplication().getSharedPreferences("User Details",Context.MODE_PRIVATE);
-      //  String id = preferences.getString("User ID","");
+      String id = preferences.getString("User ID","");
         List<User> us = User.listAll(User.class);
         User u = SugarRecord.findById(User.class,preferences.getLong("id",10));
 

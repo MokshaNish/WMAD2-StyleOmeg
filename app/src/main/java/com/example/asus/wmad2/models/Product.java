@@ -18,7 +18,7 @@ public class Product extends SugarRecord<Product> {
     @SerializedName("Catagory")
     private String Catagory;
     @SerializedName("Price")
-    private String Price;
+    private double Price;
     @SerializedName("Quantity")
     private String Quantity;
     @SerializedName("Active")
@@ -137,7 +137,7 @@ public class Product extends SugarRecord<Product> {
 */
 
 
-    public Product(Long id, String name, String product, String shortDescription, String longDescription, String catagory, String price, String quantity, String active, String scaledImage, String fullImage) {
+    public Product(Long id, String name, String product, String shortDescription, String longDescription, String catagory, double price, String quantity, String active, String scaledImage, String fullImage) {
         Id = id;
         Name = name;
         Product = product;
@@ -201,11 +201,11 @@ public class Product extends SugarRecord<Product> {
         Catagory = catagory;
     }
 
-    public String getPrice() {
+    public double getPrice() {
         return Price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(double price) {
         Price = price;
     }
 

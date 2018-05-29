@@ -26,6 +26,7 @@ import java.lang.reflect.Type;
 import java.util.List;
 
 public class Shop extends Fragment {
+    Product product;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -59,19 +60,21 @@ public class Shop extends Fragment {
 
                                           String selectedItem = parent.getItemAtPosition(position).toString();
                                           Details d = new Details();
-                                          Product product = productList.get(position);
+                                           product = productList.get(position);
 
                                           String name = product.getName();
 
-                                          String price = product.getPrice();
+                                          Double price = product.getPrice();
                                           String image = product.getFullImage();
                                           String description = product.getLongDescription();
+                                           Long pid= product.getId();
 
                                           Bundle bd = new Bundle(2);
                                           bd.putString("Name" ,name);
-                                          bd.putString("Price",price);
+                                          bd.putDouble("Price",price);
                                           bd.putString("Image",image);
                                           bd.putString("Description",description);
+                                          bd.putLong("id", pid);
 
                                           d.setArguments(bd);
                                           android.support.v4.app.FragmentTransaction x = getActivity().getSupportFragmentManager().beginTransaction();

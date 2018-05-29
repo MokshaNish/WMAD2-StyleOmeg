@@ -60,12 +60,16 @@ public class ImageAdapter extends ArrayAdapter<Product> {
             //}
 
             //imageView.setImageResource(mThumbIds[position]);
+        try {
             Picasso.get()
                     .load(p.getScaledImage())
                     .placeholder(R.drawable.women)
                     .resize(100, 100)
                     .into(imageView);
-            return view;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return view;
 
 
         }
