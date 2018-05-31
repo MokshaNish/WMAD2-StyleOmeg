@@ -55,7 +55,7 @@ public void validate(String email, String password){
         if(userList.size() == 1){
             String m = uss.getId().toString();
             Long lon=uss.getId();
-            SharedPreferences preferences = getApplication().getSharedPreferences("User Details",MODE_PRIVATE);
+            SharedPreferences preferences = getSharedPreferences("User Details",MODE_PRIVATE);
             SharedPreferences.Editor edit =preferences.edit();
             edit.putString("id", String.valueOf(lon));
             edit.commit();

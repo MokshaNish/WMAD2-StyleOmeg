@@ -1,6 +1,5 @@
 package com.example.asus.wmad2.activities;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -16,13 +15,13 @@ import android.view.MenuItem;
 
 import com.example.asus.wmad2.R;
 import com.example.asus.wmad2.fragment.AboutUsFragment;
+import com.example.asus.wmad2.fragment.CancelCartFragment;
 import com.example.asus.wmad2.fragment.CartFragment;
 import com.example.asus.wmad2.fragment.CategoryFragment;
 import com.example.asus.wmad2.fragment.ContactUsFragment;
 import com.example.asus.wmad2.fragment.EditProfileFragment;
 import com.example.asus.wmad2.fragment.HomeFragment;
 import com.example.asus.wmad2.fragment.SearchFragment;
-import com.example.asus.wmad2.fragment.ShareFragment;
 import com.example.asus.wmad2.fragment.Shop;
 
 public class NavigationActivity extends AppCompatActivity
@@ -126,16 +125,23 @@ public class NavigationActivity extends AppCompatActivity
             fr.replace(R.id.fMain,new CartFragment());
             fr.commit();
 
-        } else if (id == R.id.nav_Search) {
+        }
+        else if (id == R.id.nav_CancelCart) {
+
+            android.support.v4.app.FragmentTransaction fr = getSupportFragmentManager().beginTransaction();
+            fr.replace(R.id.fMain, new CancelCartFragment());
+            fr.commit();
+
+        }else if (id == R.id.nav_Search) {
 
             android.support.v4.app.FragmentTransaction fr = getSupportFragmentManager().beginTransaction();
             fr.replace(R.id.fMain,new SearchFragment());
             fr.commit();
 
-        } else if (id == R.id.nav_Share) {
+        } else if (id == R.id.nav_Search) {
 
             android.support.v4.app.FragmentTransaction fr = getSupportFragmentManager().beginTransaction();
-            fr.replace(R.id.fMain,new ShareFragment());
+            fr.replace(R.id.fMain,new historyFragment());
             fr.commit();
 
         }  else if (id == R.id.nav_EditProfile) {

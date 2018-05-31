@@ -66,7 +66,7 @@ Orders orders;
         }
 
 
-        text1 =  view.findViewById(R.id.textViewds2);
+         text1 =  view.findViewById(R.id.textViewds2);
             text3 =  view.findViewById(R.id.textViewds1);
             text4 = view.findViewById(R.id.textViewds3);
             image = view.findViewById(R.id.detailcustomimageView);
@@ -76,6 +76,7 @@ Orders orders;
             final User use = User.findById(User.class, Long.parseLong(id));
 
         try {
+
             text1.setText(String.valueOf(pro.getPrice()));
             text3.setText(pro.getName());
             text4.setText(pro.getLongDescription());
@@ -123,7 +124,7 @@ Orders orders;
 
 
 
-        Toast.makeText(getActivity(),"Add to cart",Toast.LENGTH_SHORT).show();
+      //  Toast.makeText(getActivity(),"Add to cart",Toast.LENGTH_SHORT).show();
         return view;
 
         }}
