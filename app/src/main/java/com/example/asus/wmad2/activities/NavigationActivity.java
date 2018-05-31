@@ -133,12 +133,6 @@ public class NavigationActivity extends AppCompatActivity
             fr.replace(R.id.fMain, new CancelCartFragment());
             fr.commit();
 
-        }else if (id == R.id.nav_Search) {
-
-            android.support.v4.app.FragmentTransaction fr = getSupportFragmentManager().beginTransaction();
-            fr.replace(R.id.fMain,new SearchFragment());
-            fr.commit();
-
         } else if (id == R.id.nav_PurchaseHistory) {
 
             android.support.v4.app.FragmentTransaction fr = getSupportFragmentManager().beginTransaction();

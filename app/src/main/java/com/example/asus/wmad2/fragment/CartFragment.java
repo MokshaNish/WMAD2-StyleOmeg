@@ -50,7 +50,7 @@ public class CartFragment extends Fragment {
         final String id = preferences.getString("id","");
         final List<Product> productList = Product.listAll(Product.class);
         try{
-        final List<Orders> OrderItem = Orders.find(Orders.class,"user = ? and status = ?",id,"cart");
+        final List<Orders> OrderItem = Orders.find(Orders.class,"user = ? and status = ?",id,"Pending");
        // final List<OrderItems> OrderItems= OrderItems.listAll(OrderItems.class);
         final List<Orders> orders = Orders.listAll(Orders.class);
         final ListView lv = view.findViewById(R.id.listview);

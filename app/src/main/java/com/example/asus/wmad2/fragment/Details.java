@@ -116,6 +116,7 @@ Orders orders;
                   orders = new Orders();
                   orders.setProduct(pro);
                   orders.setUser(use);
+                  orders.setStatus("Pending");
                   orders.save();
 
               }
