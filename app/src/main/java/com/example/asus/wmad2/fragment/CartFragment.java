@@ -51,11 +51,13 @@ public class CartFragment extends Fragment {
         final List<Product> productList = Product.listAll(Product.class);
         try{
         final List<Orders> OrderItem = Orders.find(Orders.class,"user = ? and status = ?",id,"cart");
+       // final List<OrderItems> OrderItems= OrderItems.listAll(OrderItems.class);
         final List<Orders> orders = Orders.listAll(Orders.class);
         final ListView lv = view.findViewById(R.id.listview);
 
-        final Button removeall= view.findViewById(R.id.btnRemoveall);
+
         final Button checkout = view.findViewById(R.id.buttonCheckout);
+            final Button removeall = view.findViewById(R.id.btnRemoveall);
 
         final OrderItems oi = new OrderItems();
         final User user = User.findById(User.class,Long.parseLong(id));

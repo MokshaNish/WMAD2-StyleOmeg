@@ -39,7 +39,7 @@
     <string name="home">Home</string>
     <string name="cancelcart">Cancel Cart</string>
     <string name="category">Category</string>
-    <string name="share">Share </string>
+    <string name="purchasehistory">Purchase History </string>
     <string name="search">Search </string>
     <string name="cart">Cart </string>
     <string name="editprofile">Edit Profile </string>

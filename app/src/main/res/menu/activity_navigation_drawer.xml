@@ -32,9 +32,9 @@
             android:title="@string/cancelcart" />
 
         <item
-            android:id="@+id/nav_Share"
-            android:icon="@drawable/ic_share_black"
-            android:title="@string/share" />
+            android:id="@+id/nav_PurchaseHistory"
+            android:icon="@android:drawable/ic_menu_recent_history"
+            android:title="@string/purchasehistory" />
         <item
             android:id="@+id/nav_EditProfile"
             android:icon="@drawable/ic_edit_black"
