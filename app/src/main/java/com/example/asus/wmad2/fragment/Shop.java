@@ -10,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.GridView;
 
 import com.example.asus.wmad2.R;
@@ -46,9 +48,23 @@ public class Shop extends Fragment {
         ImageAdapter ia = new ImageAdapter(getActivity(), productList);
 
         LayoutInflater l = LayoutInflater.from(getContext());
-        View view =l.inflate(R.layout.activity_home,container,false);
+        final View view =l.inflate(R.layout.activity_home,container,false);
         GridView gridview = view.findViewById(R.id.gridview);
         gridview.setAdapter(ia);
+
+        final EditText search =(EditText)view.findViewById(R.id.edittextsearch) ;
+        Button btnsearch =(Button)view.findViewById(R.id.searchbutton);
+
+        btnsearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String x =search.getText().toString();
+                List<Product> productList=Product.findWithQuery(Product.class,"SELECT * FROM Product WHERE Name like '%"+x+"%'");
+                ImageAdapter ia = new ImageAdapter(getActivity(), productList);
+                GridView gridview = view.findViewById(R.id.gridview);
+                gridview.setAdapter(ia);
+            }
+        });
 
         gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                                       @Override
