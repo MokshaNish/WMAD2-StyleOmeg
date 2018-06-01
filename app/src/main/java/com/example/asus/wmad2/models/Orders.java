@@ -7,7 +7,7 @@ public class Orders extends SugarRecord<Orders> {
 
     private Product product;
     private User user;
-    private  String status = "cart";
+    private  String status = "Pending";
    // private String total;
 
     public Orders(){}

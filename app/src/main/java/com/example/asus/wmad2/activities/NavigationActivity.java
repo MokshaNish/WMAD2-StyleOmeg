@@ -20,6 +20,7 @@ import com.example.asus.wmad2.fragment.CartFragment;
 import com.example.asus.wmad2.fragment.CategoryFragment;
 import com.example.asus.wmad2.fragment.ContactUsFragment;
 import com.example.asus.wmad2.fragment.EditProfileFragment;
+import com.example.asus.wmad2.fragment.FavFragment;
 import com.example.asus.wmad2.fragment.HistoryFragment;
 import com.example.asus.wmad2.fragment.HomeFragment;
 import com.example.asus.wmad2.fragment.SearchFragment;
@@ -139,7 +140,13 @@ public class NavigationActivity extends AppCompatActivity
             fr.replace(R.id.fMain,new HistoryFragment());
             fr.commit();
 
-        }  else if (id == R.id.nav_EditProfile) {
+        } else if (id == R.id.nav_fav) {
+
+            android.support.v4.app.FragmentTransaction fr = getSupportFragmentManager().beginTransaction();
+            fr.replace(R.id.fMain,new FavFragment());
+            fr.commit();
+
+        } else if (id == R.id.nav_EditProfile) {
 
             android.support.v4.app.FragmentTransaction fr = getSupportFragmentManager().beginTransaction();
             fr.replace(R.id.fMain,new EditProfileFragment());

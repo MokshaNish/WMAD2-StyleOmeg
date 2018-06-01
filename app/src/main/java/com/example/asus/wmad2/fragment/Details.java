@@ -27,6 +27,7 @@ public class Details extends Fragment {
 
 Button sharebtn;
 Button addtocart;
+    Button fav;
 Orders orders;
     Long i  ;
     TextView text1;
@@ -109,7 +110,23 @@ Orders orders;
 
             addtocart = (Button)view.findViewById(R.id.buttonaddtocart);
 
-            addtocart.setOnClickListener(new View.OnClickListener() {
+            fav = (Button)view.findViewById(R.id.favbtn);
+
+            fav.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    orders = new Orders();
+                    orders.setProduct(pro);
+                    orders.setUser(use);
+                   // orders.setStatus("Pending");
+                    orders.save();
+
+                }
+            });
+
+
+        addtocart.setOnClickListener(new View.OnClickListener() {
               @Override
               public void onClick(View v) {
 
