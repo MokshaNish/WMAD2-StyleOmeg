@@ -2,6 +2,7 @@ package com.example.asus.wmad2.fragment;
 
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
@@ -30,9 +31,27 @@ public class ContactUsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         ((NavigationActivity)getActivity()).setActionBarTitle("Contact Us");
+        LayoutInflater l = LayoutInflater.from(getContext());
+
+        Button call;
 
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_contact_us, container, false);
+
+
+        call = view.findViewById(R.id.callbtn);
+
+        call.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent=new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:0767267677"));
+                startActivity(intent);
+
+            }
+        });
+
 
 
         final EditText name = (EditText) view.findViewById(R.id.contactName);
@@ -67,6 +86,10 @@ public class ContactUsFragment extends Fragment {
                 }
 
                 Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.putExtra(Intent.EXTRA_EMAIL,Name);
+                intent.putExtra(Intent.EXTRA_EMAIL,Inquery);
+
+
                 intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"moksha.nish@gmail.com"});
                 intent.putExtra(Intent.EXTRA_TEXT,
                         "name:" + Name + '\n' + "Email:" + email + '\n' + "inquery:" + '\n' + inquery);

@@ -67,9 +67,11 @@ public class EditProfileFragment extends Fragment{
     }
     public void ud(String name, String phone,String email){
         SharedPreferences preferences= this.getActivity().getApplication().getSharedPreferences("User Details",Context.MODE_PRIVATE);
-      String id = preferences.getString("User ID","");
+      String id = preferences.getString("id","");
         List<User> us = User.listAll(User.class);
-        User u = SugarRecord.findById(User.class,preferences.getLong("id",10));
+        String o =preferences.getString("id","");
+        User u = SugarRecord.findById(User.class,Long.parseLong(o));
+
 
         u.setName(name);
         u.setContactNo(phone);
@@ -85,7 +87,8 @@ public class EditProfileFragment extends Fragment{
             SharedPreferences preferences= this.getActivity().getApplication().getSharedPreferences("User Details",Context.MODE_PRIVATE);
             //  String id = preferences.getString("User ID","");
             List<User> us = User.listAll(User.class);
-            User u = SugarRecord.findById(User.class,preferences.getLong("id",10));
+            String o =preferences.getString("id","");
+            User u = SugarRecord.findById(User.class,Long.parseLong(o));
 
             u.setPassword(newpw);
             u.save();

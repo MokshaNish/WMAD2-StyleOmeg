@@ -103,6 +103,8 @@ public class CartFragment extends Fragment {
 
             }
         });
+
+
                 CartAdapter ia = new CartAdapter(getActivity(),OrderItem);
                 lv.setAdapter(ia);
                // final GridView MensGrid = view.findViewById(R.id.gridview);

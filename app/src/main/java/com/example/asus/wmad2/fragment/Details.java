@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.example.asus.wmad2.R;
 import com.example.asus.wmad2.activities.NavigationActivity;
+import com.example.asus.wmad2.models.Favorite;
 import com.example.asus.wmad2.models.Orders;
 import com.example.asus.wmad2.models.Product;
 import com.example.asus.wmad2.models.User;
@@ -29,6 +30,7 @@ Button sharebtn;
 Button addtocart;
     Button fav;
 Orders orders;
+Favorite favorite;
     Long i  ;
     TextView text1;
     String id;
@@ -116,11 +118,11 @@ Orders orders;
                 @Override
                 public void onClick(View v) {
 
-                    orders = new Orders();
-                    orders.setProduct(pro);
-                    orders.setUser(use);
-                   // orders.setStatus("Pending");
-                    orders.save();
+                    favorite = new Favorite();
+                    favorite.setProduct(pro);
+                    favorite.setUser(use);
+                    favorite.save();
+
 
                 }
             });
