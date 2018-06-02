@@ -37,6 +37,7 @@
     <string name="action_settings">Settings</string>
 
     <string name="contactname">Name</string>
+    <string name="logout">Logout</string>
     <string name="contactemail">Email</string>
     <string name="contactphone">Contact Number</string>
     <string name="message">Message </string>

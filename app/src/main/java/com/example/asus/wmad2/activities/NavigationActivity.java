@@ -164,6 +164,13 @@ public class NavigationActivity extends AppCompatActivity
             fr.commit();
 
         }
+        else if (id == R.id.nav_logout) {
+
+            android.support.v4.app.FragmentTransaction fr = getSupportFragmentManager().beginTransaction();
+            fr.replace(R.id.fMain,new FavFragment());
+            fr.commit();
+
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
