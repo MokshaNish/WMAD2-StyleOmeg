@@ -181,6 +181,7 @@ Favorite favorite;
 
                 review = new Review();
                 review.setMessage(r);
+                //review.getDate(r);
                 review.save();
             }
 
