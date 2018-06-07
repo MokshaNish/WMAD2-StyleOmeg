@@ -29,7 +29,7 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
        // getSupportActionBar().setTitle("Shop");
 
-        Gson gson=new Gson();
+     /*   Gson gson=new Gson();
 
             if(Product.listAll(Product.class).size()<1) {
                 Type listType = new TypeToken<List<Product>>() {
@@ -38,14 +38,14 @@ public class HomeActivity extends AppCompatActivity {
                 List<Product> products = gson.fromJson(loadJSONFromAsset(HomeActivity.this), listType);
 
                 SugarRecord.saveInTx(products);
-            }
+            }*/
 
-                List<Product> productList = Product.listAll(Product.class);
-                ImageAdapter ia = new ImageAdapter(this, productList);
+               List<Product> productList = Product.listAll(Product.class);
+              // ImageAdapter ia = new ImageAdapter(this, productList);
 
 
                 GridView gridview = (GridView) findViewById(R.id.gridview);
-                gridview.setAdapter(ia);
+            //    gridview.setAdapter(ia);
 
        gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v,
@@ -55,7 +55,7 @@ public class HomeActivity extends AppCompatActivity {
         });
 
     }
-    public String loadJSONFromAsset(Context context) {
+  /*  public String loadJSONFromAsset(Context context) {
         String json = null;
         try {
             InputStream is = context.getAssets().open("Product.json");
@@ -77,5 +77,5 @@ public class HomeActivity extends AppCompatActivity {
         }
         return json;
 
-    }
+    }*/
 }
