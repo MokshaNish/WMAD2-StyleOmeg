@@ -40,6 +40,7 @@ Orders orders;
 Favorite favorite;
     Long i  ;
     TextView text1;
+    TextView qunt;
     String id;
     TextView text3;
     TextView text4;
@@ -50,6 +51,7 @@ Favorite favorite;
 
     @NonNull
     @Override
+
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         ((NavigationActivity) getActivity()).setActionBarTitle("Detail Screen");
@@ -61,28 +63,26 @@ Favorite favorite;
 
 
         android.support.v4.app.Fragment fragment = new Details();
-
+// wthe only to way a pass values toa another fragment we use bundes a budndle is a set of data
 
         try {
 
             Bundle bundle = getArguments();
 
-
             String q = bundle.getString("Name");
             double m = bundle.getDouble("Price");
+            String v = bundle.getString("Quantity");
             String n = bundle.getString("Image");
             String o = bundle.getString("Description");
             i = bundle.getLong("id");
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
         text1 = view.findViewById(R.id.textViewds2);
         text3 = view.findViewById(R.id.textViewds1);
         text4 = view.findViewById(R.id.textViewds3);
+        qunt = view.findViewById(R.id.quntxtview);
         image = view.findViewById(R.id.detailcustomimageView);
-
 
         final Product pro = Product.findById(Product.class, i);
         final User use = User.findById(User.class, Long.parseLong(id));
@@ -90,6 +90,7 @@ Favorite favorite;
         try {
 
             text1.setText(String.valueOf(pro.getPrice()));
+            qunt.setText(pro.getQuantity());
             text3.setText(pro.getName());
             text4.setText(pro.getLongDescription());
             Picasso.get()
@@ -111,8 +112,6 @@ Favorite favorite;
                 Intent share = new Intent(android.content.Intent.ACTION_SEND);
                 share.setType("text/plain");
                 share.putExtra(Intent.EXTRA_SUBJECT, "MY NEW APP");
-
-
                 share.putExtra(Intent.EXTRA_TEXT, " Try my new app:");
                 startActivity(Intent.createChooser(share, "Share Via"));
 
@@ -147,7 +146,11 @@ Favorite favorite;
                 orders.setStatus("Pending");
                 orders.save();
 
+                Toast.makeText(getActivity(), "Product added to the cart successfully", Toast.LENGTH_LONG).show();
             }
+
+
+
         });
 
 
@@ -176,7 +179,6 @@ Favorite favorite;
         return view;
     }
 
-
             private void rev(String r) {
 
                 review = new Review();
@@ -185,16 +187,7 @@ Favorite favorite;
                 review.save();
             }
 
-
-
 }
-
-
-
-
-
-
-
 
         //  Toast.makeText(getActivity(),"Add to cart",Toast.LENGTH_SHORT).show();
 

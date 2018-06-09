@@ -2,9 +2,6 @@ package com.example.asus.wmad2.models;
 
 import com.orm.SugarRecord;
 
-/**
- * Created by Asus on 6/2/2018.
- */
 
 public class Review extends SugarRecord<Review> {
 

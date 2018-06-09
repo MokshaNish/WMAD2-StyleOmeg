@@ -9,10 +9,6 @@
             android:icon="@drawable/ic_home_black"
             android:title="@string/home" />
         <item
-            android:id="@+id/nav_Category"
-            android:icon="@drawable/ic_category_black"
-            android:title="@string/category" />
-        <item
             android:id="@+id/nav_Shop"
             android:icon="@drawable/ic_shop_black"
             android:title="@string/shop" />
@@ -50,10 +46,6 @@
             android:icon="@drawable/ic_aboutus_black"
             android:title="@string/aboutus" />
 
-        <item
-            android:id="@+id/nav_logout"
-            android:icon="@android:drawable/ic_lock_power_off"
-            android:title="@string/logout" />
     </group>
 
 

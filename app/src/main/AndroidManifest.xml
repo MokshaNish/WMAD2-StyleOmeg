@@ -46,7 +46,6 @@
             android:label="@string/title_activity_navigation"
             android:theme="@style/AppTheme" />
         <activity android:name=".activities.ForgetpwdActivity" />
-        <activity android:name=".activities.LogoutActivity"></activity>
     </application>
 
 </manifest>

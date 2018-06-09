@@ -17,6 +17,7 @@ import android.widget.GridView;
 import com.example.asus.wmad2.R;
 import com.example.asus.wmad2.activities.HomeActivity;
 import com.example.asus.wmad2.activities.ImageAdapter;
+import com.example.asus.wmad2.activities.NavigationActivity;
 import com.example.asus.wmad2.models.Product;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -32,6 +33,7 @@ public class Shop extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        ((NavigationActivity)getActivity()).setActionBarTitle("Items");
 
         Gson gson=new Gson();
 

@@ -58,20 +58,23 @@ public class splash extends AppCompatActivity {
         if (productList.isEmpty())
 
         {
+            //it s alibrary  json file has json objects. so what this gson does conevrtjson obects to java objects.
             Gson gson = new Gson();
             Type listType = new TypeToken<List<Product>>() {
             }.getType();
-
+           // inbuilt method. it will convert the json object to a javaobject.
             List<Product> products = gson.fromJson(loadJSONFromAsset(getApplicationContext()), listType);
-
+           // add all java objects to the arrayList and save it in a sugarrecord
             SugarRecord.saveInTx(products);
 
 
         }
     }
+    //used
     public String loadJSONFromAsset(Context context) {
         String json = null;
         try {
+            //used to read the json file int =he asset folder.
             InputStream is = context.getAssets().open("Product.json");
 
             int size = is.available();

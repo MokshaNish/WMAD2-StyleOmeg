@@ -7,11 +7,13 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.asus.wmad2.R;
@@ -28,6 +30,7 @@ import java.util.List;
 
 public class PurchaseFragment extends Fragment {
 
+    Product p;
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
@@ -42,6 +45,16 @@ public class PurchaseFragment extends Fragment {
 
         buy = view.findViewById(R.id.btnBuy);
         cancel = view.findViewById(R.id.button3);
+         final TextView ttl = view.findViewById(R.id.textViewfito);
+
+        try {
+            Bundle bundle=getArguments();
+            bundle.getDouble("pf");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        ttl.setText(String.valueOf("pf"));
 
 
         final SharedPreferences preferences = getContext().getSharedPreferences("User Details", Context.MODE_PRIVATE);
@@ -52,6 +65,8 @@ public class PurchaseFragment extends Fragment {
         final User user = User.findById(User.class, Long.parseLong(id));
         final Product product = Product.findById(Product.class, Long.parseLong(id));
 
+        ttl.setText(String.valueOf(ttl));
+
 
         buy.setOnClickListener(new View.OnClickListener() {
             final List<Orders> OrderItem = Orders.find(Orders.class, "user=?", id);
@@ -59,15 +74,12 @@ public class PurchaseFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
+                    for (Orders o : OrderItem) {
 
-
-
-                for (Orders o : OrderItem) {
+                       // product.setQuantity(o.getProduct().getQuantity()-);
 
                    // Date d = Calendar.getInstance().getTime();
                    // oi.setDate(d.toString());
-
-
                     oi.setOrders(o);
                     oi.setUser(user);
                     o.setStatus("purchased");
@@ -75,7 +87,6 @@ public class PurchaseFragment extends Fragment {
                     o.save();
                     oi.save();
                 }
-
                 oi.save();
 
                 Toast.makeText(getActivity(), "Products  purchased successfully", Toast.LENGTH_LONG).show();

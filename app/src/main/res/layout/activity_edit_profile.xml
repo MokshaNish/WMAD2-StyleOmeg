@@ -129,7 +129,7 @@
         android:layout_marginEnd="16dp"
         android:ems="10"
         android:hint="@string/currentpassword"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         app:layout_constraintBaseline_toBaselineOf="@+id/textViewucp"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -140,7 +140,7 @@
         android:layout_marginEnd="16dp"
         android:ems="10"
         android:hint="@string/newpassword"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         app:layout_constraintBaseline_toBaselineOf="@+id/textViewunp"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -151,7 +151,7 @@
         android:layout_marginEnd="16dp"
         android:ems="10"
         android:hint="@string/verifypassword"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         app:layout_constraintBaseline_toBaselineOf="@+id/textViewuvnp"
         app:layout_constraintEnd_toEndOf="parent" />
 

@@ -1,5 +1,7 @@
 package com.example.asus.wmad2.activities;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -17,13 +19,11 @@ import com.example.asus.wmad2.R;
 import com.example.asus.wmad2.fragment.AboutUsFragment;
 import com.example.asus.wmad2.fragment.CancelCartFragment;
 import com.example.asus.wmad2.fragment.CartFragment;
-import com.example.asus.wmad2.fragment.CategoryFragment;
 import com.example.asus.wmad2.fragment.ContactUsFragment;
 import com.example.asus.wmad2.fragment.EditProfileFragment;
 import com.example.asus.wmad2.fragment.FavFragment;
 import com.example.asus.wmad2.fragment.HistoryFragment;
 import com.example.asus.wmad2.fragment.HomeFragment;
-import com.example.asus.wmad2.fragment.SearchFragment;
 import com.example.asus.wmad2.fragment.Shop;
 
 public class NavigationActivity extends AppCompatActivity
@@ -90,8 +90,15 @@ public class NavigationActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.action_logout) {
+            SharedPreferences preferences = getSharedPreferences("User Details",MODE_PRIVATE);
+            SharedPreferences.Editor edit =preferences.edit();
+            edit.clear();
+            edit.commit();
+            finish();
+
+            Intent intent=new Intent(NavigationActivity.this,MainActivity.class);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);
@@ -109,11 +116,7 @@ public class NavigationActivity extends AppCompatActivity
             fr.replace(R.id.fMain,new HomeFragment());
             fr.commit();
 
-        } else if (id == R.id.nav_Category) {
 
-            android.support.v4.app.FragmentTransaction fr = getSupportFragmentManager().beginTransaction();
-            fr.replace(R.id.fMain,new CategoryFragment());
-            fr.commit();
 
         } else if (id == R.id.nav_Shop) {
 
@@ -163,14 +166,14 @@ public class NavigationActivity extends AppCompatActivity
             fr.replace(R.id.fMain,new AboutUsFragment());
             fr.commit();
 
-        }
-        else if (id == R.id.nav_logout) {
+        } else if (id == R.id.action_logout) {
 
-            android.support.v4.app.FragmentTransaction fr = getSupportFragmentManager().beginTransaction();
-            fr.replace(R.id.fMain,new FavFragment());
-            fr.commit();
+            setTitle("LOGOUT");
+            Intent intent=new Intent(this,MainActivity.class);
+            startActivity(intent);
 
         }
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

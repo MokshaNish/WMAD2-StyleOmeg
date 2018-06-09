@@ -40,7 +40,10 @@ public class CartAdapter extends ArrayAdapter<Orders> {
 
         //("ViewHolder") View view= minflater.inflate(R.)
 
+
+        //it will to give this class a specicifc layout
         final Orders o = getItem(position);
+//it will retrive the position of the to get the current list view or the grid view position
         LayoutInflater layoutInflater = LayoutInflater.from(getContext());
         View view = layoutInflater.inflate(R.layout.cartlayout, parent, false);
 
@@ -51,6 +54,7 @@ public class CartAdapter extends ArrayAdapter<Orders> {
             public void onClick(View v) {
                 remove(o);
                 o.setStatus("removed");
+                //it will change the status of product. it wiont get remived from the databse even though you remove of the cart
                 o.save();
 
             }

@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.asus.wmad2.R;
@@ -30,49 +31,61 @@ import java.util.List;
  */
 public class CartFragment extends Fragment {
 
-    Button removeall;
+    Button remall;
     Button checkout;
+
 
     public CartFragment() {
         // Required empty public constructor
     }
-
+double total = 0;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-     //   ((NavigationActivity)getActivity()).setActionBarTitle("Cart");
+
+
+      ((NavigationActivity)getActivity()).setActionBarTitle("Cart");
 
         // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_cart, container, false);
 
+        View view= inflater.inflate(R.layout.fragment_cart, container, false);
+//to get the id of the user who has logged in
         SharedPreferences preferences= getContext().getSharedPreferences("User Details", Context.MODE_PRIVATE);
         final String id = preferences.getString("id","");
+
         final List<Product> productList = Product.listAll(Product.class);
+
         try{
+//the name of the arraylist is orderItem.orders is the type of the array.
+            //it will retrive all the values which is from the user who has logged in
         final List<Orders> OrderItem = Orders.find(Orders.class,"user = ? and status = ?",id,"Pending");
-       // final List<OrderItems> OrderItems= OrderItems.listAll(OrderItems.class);
         final List<Orders> orders = Orders.listAll(Orders.class);
+
+            // final List<OrderItems> OrderItems= OrderItems.listAll(OrderItems.class);
+
+
         final ListView lv = view.findViewById(R.id.listview);
-
-
         final Button checkout = view.findViewById(R.id.buttonCheckout);
-            final Button removeall = view.findViewById(R.id.btnRemoveall);
+        final Button remall = view.findViewById(R.id.btnRemoveall);
+        final TextView totalp = view.findViewById(R.id.totaltextview);
+
 
         final OrderItems oi = new OrderItems();
         final User user = User.findById(User.class,Long.parseLong(id));
 
-            removeall.setOnClickListener(new View.OnClickListener() {
+        remall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                for(Orders o:OrderItem ){
-                    o.delete();;
+                for(Orders o:OrderItem){
+                    o.delete();
                 }
+
                 Toast.makeText(getActivity(),"deleted all products successfully",Toast.LENGTH_LONG).show();
 
             }
         });
+
 
             checkout.setOnClickListener(new View.OnClickListener() {
             final List<Orders> OrderItem = Orders.find(Orders.class,"user=?",id);
@@ -81,9 +94,13 @@ public class CartFragment extends Fragment {
 
                 FragmentManager fragmentManager= getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                PurchaseFragment pf = new PurchaseFragment();
+              // android.support.v4.app.FragmentTransaction fr = getSupportFragmentManager().beginTransaction();
 
-              //  android.support.v4.app.FragmentTransaction fr = getSupportFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.fMain,new PurchaseFragment());
+                Bundle bundle = new Bundle();
+                bundle.putDouble("total",total);
+                pf.setArguments(bundle);
+                fragmentTransaction.replace(R.id.fMain,pf);
                 fragmentTransaction.commit();
 
 
@@ -95,17 +112,27 @@ public class CartFragment extends Fragment {
                     oi.setUser(user);
                     o.delete();
                 }
-
                 oi.save();
-
              Toast.makeText(getActivity(),"Products  purchased successfully",Toast.LENGTH_LONG).show();
              */
 
             }
         });
+            for (Orders o: OrderItem){
+                total = total +o.getProduct().getPrice();
+
+            }
+
+            totalp.setText(String.valueOf(total));
 
 
-                CartAdapter ia = new CartAdapter(getActivity(),OrderItem);
+          //  String tt =totalp.getText().toString();
+           // Bundle bundle = getArguments();
+          //  bundle.putDouble("",total);
+
+
+
+            CartAdapter ia = new CartAdapter(getActivity(),OrderItem);//pass the values to the cart adapter
                 lv.setAdapter(ia);
                // final GridView MensGrid = view.findViewById(R.id.gridview);
 

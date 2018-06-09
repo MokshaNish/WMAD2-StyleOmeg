@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.asus.wmad2.R;
 import com.example.asus.wmad2.activities.NavigationActivity;
@@ -49,6 +50,9 @@ public class EditProfileFragment extends Fragment{
                 String e=confirmpwd.getText().toString();
 
                 pass(n,p,e);
+
+                Toast.makeText(getActivity(), "Password updated successfully", Toast.LENGTH_LONG).show();
+
             }
         });
         update1.setOnClickListener(new View.OnClickListener() {
@@ -58,7 +62,7 @@ public class EditProfileFragment extends Fragment{
                 String p=phone.getText().toString();
                 String e=email.getText().toString();
 
-
+                Toast.makeText(getActivity(), "your details updated successfully", Toast.LENGTH_LONG).show();
 
         ud(n,p,e);
             }
@@ -66,6 +70,7 @@ public class EditProfileFragment extends Fragment{
         return view;
     }
     public void ud(String name, String phone,String email){
+        //find the actual user who has logged in
         SharedPreferences preferences= this.getActivity().getApplication().getSharedPreferences("User Details",Context.MODE_PRIVATE);
       String id = preferences.getString("id","");
         List<User> us = User.listAll(User.class);
