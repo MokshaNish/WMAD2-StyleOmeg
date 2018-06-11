@@ -33,7 +33,7 @@ public class favAdapter extends ArrayAdapter<Favorite> {
     private LayoutInflater inflater;
     private Context context;
    Favorite o;
-   Button vp;
+  // Button vp;
 
 
 
@@ -54,7 +54,7 @@ public class favAdapter extends ArrayAdapter<Favorite> {
         View view = layoutInflater.inflate(R.layout.favcustom, parent, false);
 
         Button button = view.findViewById(R.id.button2);
-        Button vp= view.findViewById(R.id.btnvp);
+       // Button vp= view.findViewById(R.id.btnvp);
 
 
 
@@ -69,9 +69,9 @@ public class favAdapter extends ArrayAdapter<Favorite> {
             }
         });
 
-        vp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+       // vp.setOnClickListener(new View.OnClickListener() {
+           // @Override
+         //   public void onClick(View v) {
              //   FragmentManager manager= (Activity)context.getFragmentManager();
                // FragmentManager fragmentManager= ((Activity)context).getFragmentManager();
               //  FragmentTransaction fr = fragmentManager.beginTransaction();
@@ -79,8 +79,8 @@ public class favAdapter extends ArrayAdapter<Favorite> {
                 //fr.commit();
 
 
-            }
-        });
+            //}
+        //});
 
         TextView textView1 = view.findViewById(R.id.textView25);
         TextView textView2 = view.findViewById(R.id.textView26);
