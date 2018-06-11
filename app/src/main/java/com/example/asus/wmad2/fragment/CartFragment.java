@@ -86,6 +86,11 @@ double total = 0;
             }
         });
 
+            for (Orders o: OrderItem){
+                total = total +o.getProduct().getPrice();
+
+            }
+            totalp.setText(String.valueOf(total));
 
             checkout.setOnClickListener(new View.OnClickListener() {
             final List<Orders> OrderItem = Orders.find(Orders.class,"user=?",id);
@@ -118,12 +123,8 @@ double total = 0;
 
             }
         });
-            for (Orders o: OrderItem){
-                total = total +o.getProduct().getPrice();
 
-            }
 
-            totalp.setText(String.valueOf(total));
 
 
           //  String tt =totalp.getText().toString();

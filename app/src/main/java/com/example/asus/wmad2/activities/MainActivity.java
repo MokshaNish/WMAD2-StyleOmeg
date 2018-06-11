@@ -58,7 +58,7 @@ public void validate(String email, String password){
             SharedPreferences preferences = getSharedPreferences("User Details",MODE_PRIVATE);
             SharedPreferences.Editor edit =preferences.edit();
             edit.putString("id", String.valueOf(lon));
-            edit.commit();
+            edit.apply();
 
 
             Intent intent = new Intent(this,NavigationActivity.class);

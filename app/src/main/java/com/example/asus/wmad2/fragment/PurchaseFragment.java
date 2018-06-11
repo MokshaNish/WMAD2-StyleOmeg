@@ -45,16 +45,14 @@ public class PurchaseFragment extends Fragment {
 
         buy = view.findViewById(R.id.btnBuy);
         cancel = view.findViewById(R.id.button3);
-         final TextView ttl = view.findViewById(R.id.textViewfito);
+         // TextView ttl = view.findViewById(R.id.textViewfito);
 
-        try {
+
             Bundle bundle=getArguments();
-            bundle.getDouble("pf");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+            double x=bundle.getDouble("total");
+            String a=String.valueOf(x);
 
-        ttl.setText(String.valueOf("pf"));
+       // ttl.setText(a);
 
 
         final SharedPreferences preferences = getContext().getSharedPreferences("User Details", Context.MODE_PRIVATE);
@@ -65,7 +63,7 @@ public class PurchaseFragment extends Fragment {
         final User user = User.findById(User.class, Long.parseLong(id));
         final Product product = Product.findById(Product.class, Long.parseLong(id));
 
-        ttl.setText(String.valueOf(ttl));
+       // ttl.setText(String.valueOf(ttl));
 
 
         buy.setOnClickListener(new View.OnClickListener() {
