@@ -162,7 +162,7 @@
         android:layout_marginBottom="8dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="500dp"
-        android:text="Cancel"
+        android:text="Continue Shopping"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

@@ -44,7 +44,7 @@ public void register(View view){
 
     public void forgetpw(View view){
 
-        Intent intent = new Intent(this,ForgetpwdActivity.class);
+        Intent intent = new Intent(this,FpActivity.class);
         startActivity(intent);
     }
     //comment

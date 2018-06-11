@@ -45,28 +45,30 @@
         android:id="@+id/setAsNewPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SET AS NEW PASSWORD"
-        android:textSize="23sp"
+        android:layout_below="@id/reenterNewPasswordET"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:clickable="true"
+        android:onClick="updatef"
         android:paddingLeft="40dp"
         android:paddingRight="40dp"
-        android:layout_centerHorizontal="true"
-        android:textColor = "#FFFFFF"
-        android:layout_below="@id/reenterNewPasswordET"
-        android:layout_marginTop="14dp"
-        android:clickable="true"/>
+        android:text="SET AS NEW PASSWORD"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp" />
 
     <Button
         android:id="@+id/returnButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Return to Login Page"
-        android:textSize="23sp"
+        android:layout_below="@id/setAsNewPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:onClick="returnm"
         android:paddingLeft="40dp"
         android:paddingRight="40dp"
-        android:layout_centerHorizontal="true"
-        android:textColor = "#FFFFFF"
-        android:layout_below="@id/setAsNewPassword"
-        android:layout_marginTop="20dp"
-        android:clickable="true"/>
+        android:text="Return to Login Page"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp" />
 </RelativeLayout>
 

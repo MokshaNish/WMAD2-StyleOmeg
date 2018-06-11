@@ -36,6 +36,8 @@ public class FavFragment extends android.support.v4.app.Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
          ((NavigationActivity)getActivity()).setActionBarTitle("Favorite");
 
         // Inflate the layout for this fragment
@@ -55,6 +57,8 @@ public class FavFragment extends android.support.v4.app.Fragment {
 
             final OrderItems oi = new OrderItems();
             final User user = User.findById(User.class,Long.parseLong(id));
+
+
 
 
 

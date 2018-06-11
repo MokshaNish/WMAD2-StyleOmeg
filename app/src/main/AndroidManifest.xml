@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.asus.wmad2">
 
-
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -45,7 +44,8 @@
             android:name=".activities.NavigationActivity"
             android:label="@string/title_activity_navigation"
             android:theme="@style/AppTheme" />
-        <activity android:name=".activities.ForgetpwdActivity" />
+        <activity android:name=".activities.ReviewAdapter$ForgetPasswordActivity" />
+        <activity android:name=".activities.FpActivity"></activity>
     </application>
 
 </manifest>

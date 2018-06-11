@@ -63,13 +63,13 @@ public class HistoryAdapter extends ArrayAdapter<OrderItems>{
 
             TextView textView1 = view.findViewById(R.id.textView9);
             TextView textView2 = view.findViewById(R.id.textView19);
-            TextView textView3 = view.findViewById(R.id.textView22);
+            //TextView textView3 = view.findViewById(R.id.textView22);
             ImageView imageview = view.findViewById(R.id.imageView6);
 
         try {
             textView1.setText(o.getOrders().getProduct().getName());
             textView2.setText(String.valueOf(o.getOrders().getProduct().getPrice()));
-            textView3.setText(String.valueOf(o.getOrders().getProduct().getQuantity()));
+            //textView3.setText(String.valueOf(o.getOrders().getProduct().getQuantity()));
            // d.setText(String.valueOf(oi.getDate()));
 
         } catch (Exception e) {

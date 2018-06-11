@@ -1,7 +1,9 @@
 package com.example.asus.wmad2.activities;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,9 +11,6 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.example.asus.wmad2.R;
-import com.example.asus.wmad2.models.Favorite;
-import com.example.asus.wmad2.models.OrderItems;
-import com.example.asus.wmad2.models.Orders;
 import com.example.asus.wmad2.models.Review;
 
 import java.util.Calendar;
@@ -55,4 +54,16 @@ public class ReviewAdapter extends ArrayAdapter<Review> {
         }
 
         return view;
-    }}
+    }
+
+    public static class ForgetPasswordActivity extends AppCompatActivity {
+
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_forgetpwd);
+
+
+        }
+    }
+}
